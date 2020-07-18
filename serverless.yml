@@ -12,7 +12,7 @@ provider:
   region: us-east-1
 
 functions:
-  auth:
+  enter:
     handler: handler.handler
     package:
       include:
@@ -23,3 +23,18 @@ functions:
         - "**"
     memorySize: 128
     timeout: 5
+
+resources:
+  Resources:
+    IamRoleLambdaExecution:
+      Type: AWS::IAM::Role
+      Properties:
+        AssumeRolePolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+                  - edgelambda.amazonaws.com
+              Action: sts:AssumeRole
