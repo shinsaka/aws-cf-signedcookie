@@ -1,5 +1,5 @@
 {
     "keypairId": "APKXXXXXXXXXXXXX",
     "privatekeyFile": "pk-APKXXXXXXXXXXXXXXXXX.pem",
-    "resource": "https://dxxxxxxxxxxxxx.cloudfront.net/*",
+    "resource": "https://dxxxxxxxxxxxxx.cloudfront.net/*"
 }
