@@ -1,0 +1,25 @@
+service: AwsCfSignedcookie
+
+package:
+  individually: true
+  exclude:
+    - "**"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  auth:
+    handler: handler.handler
+    package:
+      include:
+        - handler.js
+        - settings.json
+        - ${opt:pkfile}
+      exclude:
+        - "**"
+    memorySize: 128
+    timeout: 5
