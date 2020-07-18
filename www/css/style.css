@@ -1,0 +1,12 @@
+body {
+  background-color: #f2f1f0;
+}
+h1 {
+  color: #cbbde2;
+  background-color: #563d7c;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+p {
+  padding: 1rem 0.5rem;
+}
